@@ -1,9 +1,14 @@
 # Complete NLP Implementation Curriculum for Research Scientists
 
 ## Tokenization & Embeddings
-- [x] build byte-pair encoder + train your own subword vocab
-- [ ] write a "token visualizer" to map words/chunks to IDs
-- [ ] one-hot vs learned-embedding: plot cosine distances
+- [x] WordPiece Tokenization
+- [x] Byte-Pair Encoding (BPE)
+- [x] Unigram Language Model Tokenization
+- [x] SentencePiece Tokenization
+- [x] CBOW - Continuous Bag of Words
+- [x] Skip-Gram 
+- [ ] "Token visualizer" to map words/chunks to IDs
+- [ ] One-hot vs learned embeddings: plot perplexity vs context length
 
 ## Positional Embeddings
 - [ ] classic sinusoidal vs learned vs RoPE vs ALiBi: demo all four
