@@ -629,6 +629,15 @@ def parse_args():
 
 
 def get_default_corpus() -> str:
+    """Load the comprehensive English corpus."""
+    import os
+    corpus_path = os.path.join(os.path.dirname(__file__), "corpus", "english_corpus.txt")
+    
+    if os.path.exists(corpus_path):
+        with open(corpus_path, 'r', encoding='utf-8') as f:
+            return f.read() * 3  # Repeat for more training data
+    
+    # Fallback if corpus file not found
     return """
     The king and queen ruled the kingdom with wisdom and grace.
     The prince and princess lived in the royal palace.
@@ -640,12 +649,6 @@ def get_default_corpus() -> str:
     Fish swim in the deep ocean waters below.
     Machine learning uses data to train models.
     Deep learning models learn representations automatically.
-    Natural language processing understands human text.
-    Neural networks have many layers of neurons.
-    The quick brown fox jumps over the lazy dog.
-    A journey of a thousand miles begins with a single step.
-    Knowledge is power and wisdom is strength.
-    Time flies like an arrow but fruit flies like a banana.
     """ * 50
 
 

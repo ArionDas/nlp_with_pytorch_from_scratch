@@ -7,13 +7,16 @@
 - [x] SentencePiece Tokenization
 - [x] CBOW - Continuous Bag of Words
 - [x] Skip-Gram 
-- [ ] "Token visualizer" to map words/chunks to IDs
-- [ ] One-hot vs learned embeddings: plot perplexity vs context length
+- [x] "Token visualizer" to map words/chunks to IDs
+- [x] One-hot vs learned embeddings: plot cosine distances
 
 ## Positional Embeddings
-- [ ] classic sinusoidal vs learned vs RoPE vs ALiBi: demo all four
-- [ ] animate a toy sequence being "position-encoded" in 3D
-- [ ] ablate positions—watch attention collapse
+- [ ] Classic sinusoidal
+- [ ] Learned positional embeddings
+- [ ] RoPE
+- [ ] ALiBi
+- [ ] Animating a toy sequence being "position-encoded" in 3D
+- [ ] Ablate positions—watch attention collapse
 
 ## Self-Attention & Multihead Attention
 - [ ] hand-wire dot-product attention for one token
