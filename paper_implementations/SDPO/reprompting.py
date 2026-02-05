@@ -123,8 +123,8 @@ class Reprompter:
             and successful):
             return None
         
-        # Get feedback from current rollout if it failed
-        if current_rollout['reward'] < 1.0 and 'feedback' in current_rollout:
+        # Get feedback from current rollout if it failed (below success threshold)
+        if current_rollout['reward'] < self.config.success_threshold and 'feedback' in current_rollout:
             return current_rollout['feedback']
         
         # Or get feedback from a failed example
