@@ -227,7 +227,7 @@ class SDPOTrainer:
         pg_loss, pg_metrics = self.pg_loss_fn.compute_loss(
             log_probs=student_log_probs,
             old_log_probs=student_log_probs.detach(),  # On-policy
-            advantages=advantages.unsqueeze(1).expand(-1, student_log_probs.shape[1]),
+            advantages=advantages.unsqueeze(-1),
             attention_mask=original_inputs['attention_mask'][:, 1:],
             use_clipping=False  # Vanilla policy gradient for simplicity
         )
